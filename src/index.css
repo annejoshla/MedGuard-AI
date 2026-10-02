@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body { @apply bg-slate-50 text-navy-900 antialiased; }
+button:focus-visible, select:focus-visible { @apply outline-2 outline-offset-2 outline-teal-500; }
+textarea:focus-visible, input:focus-visible, a:focus-visible { @apply outline-2 outline-offset-2 outline-teal-500; }
+@media print {
+  body * { visibility: hidden; }
+  #visit-notes, #visit-notes * { visibility: visible; }
+  #visit-notes { position: absolute; inset: 0 auto auto 0; width: 100%; padding: 24px; }
+}
